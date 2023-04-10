@@ -1,4 +1,4 @@
-from aws_cdk import aws_ec2 as ec2, aws_iam as iam, App, Aws, Stack, aws_emr as emr
+from aws_cdk import aws_ec2 as ec2, Stack
 from constructs import Construct
 
 class SecurityStack(Stack):

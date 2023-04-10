@@ -66,12 +66,6 @@ class EMRClusterStack(Stack):
             instance_profile_name="emrJobFlowProfile_",
         )
 
-        vpc = ec2.Vpc.from_lookup(
-            self,
-            id="vpc",
-            vpc_name=vpc_name
-        )
-
         # create emr cluster
         emr_cluster = emr.CfnCluster(
             self,

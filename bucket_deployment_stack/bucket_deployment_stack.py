@@ -12,16 +12,16 @@ class BucketDeploymentStack(Stack):
     def __init__(self,
                  scope: Construct, 
                  construct_id: str,
-                 primary_bucket: str,
-                 log_bucket: str,
+                 primary_bucket_name: str,
+                 log_bucket_name: str,
                  **kwargs
                 ) -> None:
         super().__init__(scope, construct_id, **kwargs)
 
         primary_bucket = s3.Bucket(
             self,
-            id=primary_bucket,
-            bucket_name=primary_bucket
+            id=primary_bucket_name,
+            bucket_name=log_bucket_name
         )
 
         log_bucket = s3.Bucket(
